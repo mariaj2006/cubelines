@@ -1,7 +1,7 @@
 import numpy as np  
 
 def get_muse_lsf(wave):
-    l0, r0 = np.loadtxt(os.environ['HOME']+'/CUBS/muse_lsf.dat',unpack=True)
+    l0, r0 = np.loadtxt('/Users/mariasanchezrincon/CASSI_SURF/UGC7342_IFS_data/muse_lsf.dat',unpack=True)
     r = interp1d(l0, r0)(wave)
     lsf = 2.998e5/r
     return lsf
